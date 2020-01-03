@@ -55,5 +55,9 @@
         "sebastian/phpcpd": "^4.1",
         "signpostmarv/php-cs-fixer-config": "^0.14.0",
         "vimeo/psalm": "^3.8"
+    },
+    "suggest": {
+        "signpostmarv/brick-math-base-convert-bcmath": "Handle base-10 & base-2 conversions with ext-bcmath",
+        "signpostmarv/brick-math-base-convert-gmp": "Handle base-10 & base-2 conversions with ext-gmp"
     }
 }
