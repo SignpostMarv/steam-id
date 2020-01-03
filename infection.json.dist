@@ -1,0 +1,25 @@
+{
+    "timeout": 10,
+    "source": {
+        "directories": [
+            ".\/src\/"
+        ]
+    },
+    "logs": {
+        "text": "infection.log"
+    },
+    "mutators": {
+        "@default": true,
+        "CastString": {
+            "ignore": [
+                "SignpostMarv\\SteamId\\Parser::ToSteamCommunityUrl"
+            ]
+        },
+        "GreaterThan": {
+            "ignore": [
+                "SignpostMarv\\SteamId\\Parser::FromString",
+                "SignpostMarv\\SteamId\\SteamId::__construct"
+            ]
+        }
+    }
+}

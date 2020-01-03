@@ -1,0 +1,59 @@
+{
+    "name": "signpostmarv/steam-id",
+    "description": "SteamID Parsing",
+    "type": "library",
+    "require": {
+        "php": "^7.4",
+        "ext-ctype": "*",
+        "signpostmarv/brick-math-base-convert": "^0.1.1"
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "SignpostMarv",
+            "email": "me@signpostmarv.name"
+        }
+    ],
+	"config": {
+		"classmap-authoritative": true,
+		"sort-packages": true
+	},
+	"scripts": {
+		"tests": [
+			"phpunit -vvvv",
+			"infection --min-msi=100",
+			"@static-analysis"
+		],
+		"static-analysis": [
+			"psalm --shepherd --show-info=false",
+			"phpcpd src tests",
+			"phpmnd ./ --exclude=./coverage/ --exclude=./vendor/ --non-zero-exit-on-violation --hint",
+			"composer-require-checker check ./composer.json",
+			"php-cs-fixer fix --verbose --dry-run --diff-format=udiff"
+		]
+	},
+    "autoload": {
+        "psr-4": {
+            "SignpostMarv\\SteamId\\": [
+                "./src/"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SignpostMarv\\SteamId\\": [
+                "./tests/"
+            ]
+        }
+    },
+    "require-dev": {
+        "infection/infection": "^0.15.0",
+        "maglnet/composer-require-checker": "^2.0",
+        "phpunit/phpunit": "^8.5",
+        "povils/phpmnd": "^2.1",
+        "psalm/plugin-phpunit": "^0.8.0",
+        "sebastian/phpcpd": "^4.1",
+        "signpostmarv/php-cs-fixer-config": "^0.14.0",
+        "vimeo/psalm": "^3.8"
+    }
+}
