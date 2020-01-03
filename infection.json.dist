@@ -20,6 +20,11 @@
                 "SignpostMarv\\SteamId\\Parser::FromString",
                 "SignpostMarv\\SteamId\\SteamId::__construct"
             ]
+        },
+        "Identical": {
+            "ignore": [
+                "SignpostMarv\\SteamId\\Parser::FromString"
+            ]
         }
     }
 }
