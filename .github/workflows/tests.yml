@@ -34,7 +34,7 @@ jobs:
       run: composer run static-analysis
 
     - name: Mutation Testing
-      run: ./vendor/bin/infection --min-msi=100 || {cat ./infection.log && false}
+      run: ./vendor/bin/infection --min-msi=100 || {cat ./infection.log && exit 1}
 
     - name: Coverage
       run: ./vendor/bin/phpunit --coverage-clover=./phpunit.clover && ./vendor/bin/php-coveralls
