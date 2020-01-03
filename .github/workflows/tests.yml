@@ -40,5 +40,9 @@ jobs:
       if: failure()
       run: cat ./infection.log
 
-    - name: Coverage
-      run: ./vendor/bin/phpunit --coverage-clover=./phpunit.clover && ./vendor/bin/php-coveralls
+    - name: Generate Coverage
+      run: ./vendor/bin/phpunit --coverage-clover=./phpunit.clover
+
+    - name: Upload Coverage
+      if: success()
+      run: ./vendor/bin/php-coveralls
