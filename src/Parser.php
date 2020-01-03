@@ -38,6 +38,8 @@ class Parser
 		7 => ['0170000000000000', 'groups'],
 	];
 
+	const EXPECT_MATCH = 1;
+
 	private Calculator $calculator;
 
 	public function __construct(Calculator $calculator = null)
@@ -78,7 +80,7 @@ class Parser
 			$matches
 		);
 
-		assert(1 === $match, new UnexpectedValueException(
+		assert(self::EXPECT_MATCH === $match, new UnexpectedValueException(
 			'Binary SteamId was not of expected format!'
 		));
 
