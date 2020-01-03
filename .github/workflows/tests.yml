@@ -1,0 +1,22 @@
+name: Tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Install
+      run: export COMPOSER_ROOT_VERSION=dev-master && composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Static Analysis
+      run: composer run static-analysis
+
+    - name: Mutation Testing
+      run: ./vendor/bin/infection --min-msi=100
+
+    - name: Coverage
+      run: ./vendor/bin/phpunit --coverage-clover=./phpunit.clover && ./vendor/bin/php-coveralls
