@@ -17,7 +17,10 @@
 	"config": {
 		"classmap-authoritative": true,
 		"sort-packages": true
-	},
+    },
+    "conflict": {
+        "vimeo/psalm": "<3.8.3"
+    },
 	"scripts": {
 		"tests": [
 			"phpunit -vvvv",

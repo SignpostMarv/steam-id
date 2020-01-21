@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <psalm
-	totallyTyped="false"
+	findUnusedCode="true"
+	totallyTyped="true"
+	strictBinaryOperands="true"
+	requireVoidReturnType="true"
 	resolveFromConfigFile="true"
+	checkForThrowsInGlobalScope="true"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="https://getpsalm.org/schema/config"
 	xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
