@@ -12,8 +12,8 @@ use PHPUnit\Framework\TestCase;
 class SteamIdTest extends TestCase
 {
 	/**
-	* @return list<array{0:int}>
-	*/
+	 * @return list<array{0:int}>
+	 */
 	public function dataProviderAccountFailure() : array
 	{
 		return [
@@ -23,10 +23,10 @@ class SteamIdTest extends TestCase
 	}
 
 	/**
-	* @dataProvider dataProviderAccountFailure
-	*
-	* @covers \SignpostMarv\SteamId\SteamId::__construct()
-	*/
+	 * @dataProvider dataProviderAccountFailure
+	 *
+	 * @covers \SignpostMarv\SteamId\SteamId::__construct()
+	 */
 	public function test_account_failure(int $value) : void
 	{
 		static::expectException(InvalidArgumentException::class);
@@ -44,8 +44,8 @@ class SteamIdTest extends TestCase
 	}
 
 	/**
-	* @return list<array{0:int}>
-	*/
+	 * @return list<array{0:int}>
+	 */
 	public function dataProviderInstanceFailure() : array
 	{
 		return [
@@ -55,10 +55,10 @@ class SteamIdTest extends TestCase
 	}
 
 	/**
-	* @dataProvider dataProviderInstanceFailure
-	*
-	* @covers \SignpostMarv\SteamId\SteamId::__construct()
-	*/
+	 * @dataProvider dataProviderInstanceFailure
+	 *
+	 * @covers \SignpostMarv\SteamId\SteamId::__construct()
+	 */
 	public function test_instance_failure(int $value) : void
 	{
 		static::expectException(InvalidArgumentException::class);
@@ -76,11 +76,11 @@ class SteamIdTest extends TestCase
 	}
 
 	/**
-	* @dataProvider dataProviderInstanceFailure
-	*
-	* @covers \SignpostMarv\SteamId\SteamId::__construct()
-	* @covers \SignpostMarv\SteamId\SteamId::__toString()
-	*/
+	 * @dataProvider dataProviderInstanceFailure
+	 *
+	 * @covers \SignpostMarv\SteamId\SteamId::__construct()
+	 * @covers \SignpostMarv\SteamId\SteamId::__toString()
+	 */
 	public function test_steam_id_string() : void
 	{
 		static::assertSame(

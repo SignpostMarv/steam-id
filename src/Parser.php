@@ -108,8 +108,8 @@ class Parser
 		}
 
 		/**
-		* @var array{0:0|1, 1:0|1|2|3|4|5|6|7|8|9|10, 2:0|1|2|3|4|5}
-		*/
+		 * @var array{0:0|1, 1:0|1|2|3|4|5|6|7|8|9|10, 2:0|1|2|3|4|5}
+		 */
 		$nudge = [$y, $type, $universe];
 
 		[$y, $type, $universe] = $nudge;

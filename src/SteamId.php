@@ -9,10 +9,10 @@ namespace SignpostMarv\SteamId;
 use InvalidArgumentException;
 
 /**
-* @psalm-type y = 0|1
-* @psalm-type type = 0|1|2|3|4|5|6|7|8|9|10
-* @psalm-type universe = 0|1|2|3|4|5
-*/
+ * @psalm-type y = 0|1
+ * @psalm-type type = 0|1|2|3|4|5|6|7|8|9|10
+ * @psalm-type universe = 0|1|2|3|4|5
+ */
 class SteamId
 {
 	const TYPE_MAX = 10;
@@ -24,41 +24,41 @@ class SteamId
 	const INSTANCE_MAX = 1048575;
 
 	/**
-	* @readonly
-	*
-	* @var y
-	*/
+	 * @readonly
+	 *
+	 * @var y
+	 */
 	public int $y;
 
 	/**
-	* @readonly
-	*/
+	 * @readonly
+	 */
 	public int $account;
 
 	/**
-	* @readonly
-	*/
+	 * @readonly
+	 */
 	public int $instance;
 
 	/**
-	* @readonly
-	*
-	* @var type
-	*/
+	 * @readonly
+	 *
+	 * @var type
+	 */
 	public int $type;
 
 	/**
-	* @readonly
-	*
-	* @var universe
-	*/
+	 * @readonly
+	 *
+	 * @var universe
+	 */
 	public int $universe;
 
 	/**
-	* @param y $y
-	* @param type $type
-	* @param universe $universe
-	*/
+	 * @param y $y
+	 * @param type $type
+	 * @param universe $universe
+	 */
 	public function __construct(
 		int $y,
 		int $account,

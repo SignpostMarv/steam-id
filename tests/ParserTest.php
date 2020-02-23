@@ -14,8 +14,8 @@ use UnexpectedValueException;
 class ParserTest extends TestCase
 {
 	/**
-	* @return list<array{0:string, 1:class-string<Throwable>, 2:string}>
-	*/
+	 * @return list<array{0:string, 1:class-string<Throwable>, 2:string}>
+	 */
 	public function dataProviderFromStringFailure() : array
 	{
 		return [
@@ -52,13 +52,13 @@ class ParserTest extends TestCase
 	}
 
 	/**
-	* @dataProvider dataProviderFromStringFailure
-	*
-	* @covers \SignpostMarv\SteamId\Parser::__construct()
-	* @covers \SignpostMarv\SteamId\Parser::FromString()
-	*
-	* @param class-string<Throwable> $exception_type
-	*/
+	 * @dataProvider dataProviderFromStringFailure
+	 *
+	 * @covers \SignpostMarv\SteamId\Parser::__construct()
+	 * @covers \SignpostMarv\SteamId\Parser::FromString()
+	 *
+	 * @param class-string<Throwable> $exception_type
+	 */
 	public function test_data_provider_from_string_failure(
 		string $id,
 		string $exception_type,
@@ -73,12 +73,12 @@ class ParserTest extends TestCase
 	}
 
 	/**
-	* @dataProvider dataProviderFromStringFailure
-	*
-	* @covers \SignpostMarv\SteamId\Parser::__construct()
-	* @covers \SignpostMarv\SteamId\Parser::FromString()
-	* @covers \SignpostMarv\SteamId\SteamId::__construct()
-	*/
+	 * @dataProvider dataProviderFromStringFailure
+	 *
+	 * @covers \SignpostMarv\SteamId\Parser::__construct()
+	 * @covers \SignpostMarv\SteamId\Parser::FromString()
+	 * @covers \SignpostMarv\SteamId\SteamId::__construct()
+	 */
 	public function test_from_string() : void
 	{
 		$id = (new Parser())->FromString('76561197960287930');
@@ -91,12 +91,12 @@ class ParserTest extends TestCase
 	}
 
 	/**
-	* @dataProvider dataProviderFromStringFailure
-	*
-	* @covers \SignpostMarv\SteamId\Parser::__construct()
-	* @covers \SignpostMarv\SteamId\Parser::FromSteamId()
-	* @covers \SignpostMarv\SteamId\SteamId::__construct()
-	*/
+	 * @dataProvider dataProviderFromStringFailure
+	 *
+	 * @covers \SignpostMarv\SteamId\Parser::__construct()
+	 * @covers \SignpostMarv\SteamId\Parser::FromSteamId()
+	 * @covers \SignpostMarv\SteamId\SteamId::__construct()
+	 */
 	public function test_from_steam_id() : void
 	{
 		$id = (new Parser())->FromSteamId(new SteamId(0, 11101, 1, 1, 1));
@@ -105,13 +105,13 @@ class ParserTest extends TestCase
 	}
 
 	/**
-	* @dataProvider dataProviderFromStringFailure
-	*
-	* @covers \SignpostMarv\SteamId\Parser::__construct()
-	* @covers \SignpostMarv\SteamId\Parser::FromString()
-	* @covers \SignpostMarv\SteamId\Parser::ToSteamCommunityUrl()
-	* @covers \SignpostMarv\SteamId\SteamId::__construct()
-	*/
+	 * @dataProvider dataProviderFromStringFailure
+	 *
+	 * @covers \SignpostMarv\SteamId\Parser::__construct()
+	 * @covers \SignpostMarv\SteamId\Parser::FromString()
+	 * @covers \SignpostMarv\SteamId\Parser::ToSteamCommunityUrl()
+	 * @covers \SignpostMarv\SteamId\SteamId::__construct()
+	 */
 	public function test_to_steam_community_url() : void
 	{
 		$parser = new Parser();
@@ -125,12 +125,12 @@ class ParserTest extends TestCase
 	}
 
 	/**
-	* @dataProvider dataProviderFromStringFailure
-	*
-	* @covers \SignpostMarv\SteamId\Parser::__construct()
-	* @covers \SignpostMarv\SteamId\Parser::ToSteamCommunityUrl()
-	* @covers \SignpostMarv\SteamId\SteamId::__construct()
-	*/
+	 * @dataProvider dataProviderFromStringFailure
+	 *
+	 * @covers \SignpostMarv\SteamId\Parser::__construct()
+	 * @covers \SignpostMarv\SteamId\Parser::ToSteamCommunityUrl()
+	 * @covers \SignpostMarv\SteamId\SteamId::__construct()
+	 */
 	public function test_to_steam_community_url_failure() : void
 	{
 		$parser = new Parser();
