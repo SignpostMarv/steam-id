@@ -2,11 +2,6 @@
     "name": "signpostmarv/steam-id",
     "description": "SteamID Parsing",
     "type": "library",
-    "require": {
-        "php": "^7.4",
-        "ext-ctype": "*",
-        "signpostmarv/brick-math-base-convert": "^0.1.1"
-    },
     "license": "Apache-2.0",
     "authors": [
         {
@@ -48,6 +43,11 @@
                 "./tests/"
             ]
         }
+    },
+    "require": {
+        "php": "^7.4",
+        "ext-ctype": "*",
+        "signpostmarv/brick-math-base-convert": "^0.1.1"
     },
     "require-dev": {
         "infection/infection": "^0.15.0",
