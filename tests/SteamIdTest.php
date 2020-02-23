@@ -27,7 +27,7 @@ class SteamIdTest extends TestCase
 	*
 	* @covers \SignpostMarv\SteamId\SteamId::__construct()
 	*/
-	public function testAccountFailure(int $value) : void
+	public function test_account_failure(int $value) : void
 	{
 		static::expectException(InvalidArgumentException::class);
 		static::expectExceptionMessage(sprintf(
@@ -59,7 +59,7 @@ class SteamIdTest extends TestCase
 	*
 	* @covers \SignpostMarv\SteamId\SteamId::__construct()
 	*/
-	public function testInstanceFailure(int $value) : void
+	public function test_instance_failure(int $value) : void
 	{
 		static::expectException(InvalidArgumentException::class);
 		static::expectExceptionMessage(sprintf(
@@ -81,7 +81,7 @@ class SteamIdTest extends TestCase
 	* @covers \SignpostMarv\SteamId\SteamId::__construct()
 	* @covers \SignpostMarv\SteamId\SteamId::__toString()
 	*/
-	public function testSteamIdString() : void
+	public function test_steam_id_string() : void
 	{
 		static::assertSame(
 			'STEAM_1:0:11101',
