@@ -15,13 +15,13 @@ use InvalidArgumentException;
  */
 class SteamId
 {
-	const TYPE_MAX = 10;
+	public const TYPE_MAX = 10;
 
-	const UNIVERSE_MAX = 5;
+	public const UNIVERSE_MAX = 5;
 
-	const ACCOUNT_MAX = 2147483647;
+	public const ACCOUNT_MAX = 2147483647;
 
-	const INSTANCE_MAX = 1048575;
+	public const INSTANCE_MAX = 1048575;
 
 	/**
 	 * @readonly

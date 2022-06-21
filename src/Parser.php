@@ -14,31 +14,32 @@ use function preg_match;
 use SignpostMarv\Brick\Math\Calculator;
 use SignpostMarv\Brick\Math\Calculator\NativeCalculator;
 use function str_pad;
+use const STR_PAD_LEFT;
 use function strcmp;
 use UnexpectedValueException;
 
 class Parser
 {
-	const MAX = '409827566090715135';
+	public const MAX = '409827566090715135';
 
-	const MAX_BINARY = '0000010110101111111111111111111111111111111111111111111111111111';
+	public const MAX_BINARY = '0000010110101111111111111111111111111111111111111111111111111111';
 
-	const BIT_LENGTH = 64;
+	public const BIT_LENGTH = 64;
 
-	const UNIVERSE_LENGTH = 8;
+	public const UNIVERSE_LENGTH = 8;
 
-	const TYPE_LENGTH = 4;
+	public const TYPE_LENGTH = 4;
 
-	const INSTANCE_LENGTH = 20;
+	public const INSTANCE_LENGTH = 20;
 
-	const ACCOUNT_LENGTH = 31;
+	public const ACCOUNT_LENGTH = 31;
 
-	const SUPPORTED_URL_TYPES = [
+	public const SUPPORTED_URL_TYPES = [
 		1 => ['0110000100000000', 'profiles'],
 		7 => ['0170000000000000', 'groups'],
 	];
 
-	const EXPECT_MATCH = 1;
+	public const EXPECT_MATCH = 1;
 
 	private Calculator $calculator;
 
