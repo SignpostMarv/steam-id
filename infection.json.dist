@@ -15,6 +15,24 @@
                 "SignpostMarv\\SteamId\\Parser::ToSteamCommunityUrl"
             ]
         },
+        "Concat": {
+            "ignore": [
+                "SignpostMarv\\SteamId\\Parser::FromString",
+                "SignpostMarv\\SteamId\\Parser::ToSteamCommunityUrl"
+            ]
+        },
+        "ConcatOperandRemoval": {
+            "ignore": [
+                "SignpostMarv\\SteamId\\Parser::FromString",
+                "SignpostMarv\\SteamId\\Parser::ToSteamCommunityUrl"
+            ]
+        },
+        "DecrementInteger": {
+            "ignore": [
+                "SignpostMarv\\SteamId\\Parser::FromSteamId",
+                "SignpostMarv\\SteamId\\Parser::FromString"
+            ]
+        },
         "GreaterThan": {
             "ignore": [
                 "SignpostMarv\\SteamId\\Parser::FromString",
@@ -22,6 +40,22 @@
             ]
         },
         "Identical": {
+            "ignore": [
+                "SignpostMarv\\SteamId\\Parser::FromString"
+            ]
+        },
+        "IncrementInteger": {
+            "ignore": [
+                "SignpostMarv\\SteamId\\Parser::FromSteamId",
+                "SignpostMarv\\SteamId\\Parser::FromString"
+            ]
+        },
+        "PregMatchRemoveCaret": {
+            "ignore": [
+                "SignpostMarv\\SteamId\\Parser::FromString"
+            ]
+        },
+        "PregMatchRemoveDollar": {
             "ignore": [
                 "SignpostMarv\\SteamId\\Parser::FromString"
             ]
